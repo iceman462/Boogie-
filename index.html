@@ -1,0 +1,1424 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#06080d">
+  <meta name="description" content="BIGGEST EMPIRE — eFootball community, updates, tactics, match center, gallery and gaming content.">
+  <meta name="keywords" content="BIGGEST EMPIRE,eFootball,football gaming,eFootball Ghana,gaming community">
+  <meta property="og:title" content="BIGGEST EMPIRE | eFootball">
+  <meta property="og:description" content="eFootball updates, tactics, community and gaming content.">
+  <meta property="og:type" content="website">
+  <title>BIGGEST EMPIRE | eFootball</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <style id="biggest-empire-styles">
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Rajdhani:wght@500;600;700&display=swap');
+
+:root{
+  --bg:#05070b;--bg2:#090d13;--card:#0e131b;--card2:#121923;
+  --text:#f6f8fb;--muted:#929cab;--line:#222b36;
+  --ice:#79e8ff;--ice2:#c4f7ff;--gold:#ffd21c;--green:#25d366;
+  --danger:#ff5d6c;--shadow:0 24px 80px rgba(0,0,0,.42);
+  --radius:20px;--max:1180px;
+}
+body.light{
+  --bg:#eef4f7;--bg2:#e8eff3;--card:#fff;--card2:#f4f7f9;
+  --text:#0d141b;--muted:#5d6874;--line:#d7e0e6;--shadow:0 20px 55px rgba(22,45,60,.12);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Rajdhani,Arial,sans-serif;font-size:17px;line-height:1.5;overflow-x:hidden;transition:background .25s,color .25s}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 50% -10%,rgba(121,232,255,.06),transparent 35%);z-index:-3}
+a{color:inherit}
+button,input,textarea,select{font:inherit}
+button{cursor:pointer}
+.container{width:min(var(--max),92%);margin:auto}
+.hidden{display:none!important}
+.muted{color:var(--muted)}
+.large{font-size:19px}
+.full{width:100%}
+
+.site-bg{position:fixed;inset:0;z-index:-2;overflow:hidden;background:
+  radial-gradient(circle at 15% 20%,rgba(121,232,255,.06),transparent 24%),
+  radial-gradient(circle at 85% 70%,rgba(255,210,28,.05),transparent 25%),var(--bg)}
+.pitch-lines{position:absolute;inset:-20%;opacity:.16;background:
+  linear-gradient(90deg,transparent 49.85%,var(--ice) 50%,transparent 50.15%),
+  radial-gradient(ellipse at center,transparent 0 18%,var(--ice) 18.15% 18.3%,transparent 18.45%),
+  linear-gradient(0deg,transparent 48%,var(--ice) 48.15% 48.3%,transparent 48.45%),
+  linear-gradient(90deg,transparent 8%,var(--ice) 8.15% 8.3%,transparent 8.45% 91.55%,var(--ice) 91.7% 91.85%,transparent 92%);
+  transform:perspective(600px) rotateX(58deg) scale(1.5);transform-origin:center top}
+.glow{position:absolute;width:420px;height:420px;border-radius:50%;filter:blur(70px);opacity:.12}
+.glow-a{background:var(--ice);left:-160px;top:30%}.glow-b{background:var(--gold);right:-160px;bottom:10%}
+.grain{position:absolute;inset:0;opacity:.025;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E")}
+
+.header{position:sticky;top:0;z-index:100;background:color-mix(in srgb,var(--bg) 84%,transparent);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.navbar{height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px;position:relative}
+.logo{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-family:Orbitron,sans-serif;font-weight:900;letter-spacing:1px}
+.logo-mark{display:grid;place-items:center;width:39px;height:39px;border:1px solid rgba(121,232,255,.38);border-radius:12px;background:linear-gradient(145deg,#16242b,#080c11);color:var(--ice);box-shadow:0 0 25px rgba(121,232,255,.1)}
+.logo b{color:var(--text);display:block}.logo em{font-style:normal;color:var(--ice);font-size:10px;letter-spacing:3px;display:block;margin-top:-2px}
+.menu{display:flex;align-items:center;gap:23px}
+.nav-link{text-decoration:none;color:var(--muted);font-weight:800;font-size:14px;position:relative;padding:27px 0}
+.nav-link:after{content:"";position:absolute;left:0;right:100%;bottom:17px;height:2px;background:var(--ice);transition:.2s}
+.nav-link:hover,.nav-link.active{color:var(--text)}.nav-link:hover:after,.nav-link.active:after{right:0}
+.nav-actions{display:none;gap:8px;margin-left:auto}.icon-btn{width:42px;height:40px;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:11px}
+.menu-btn{font-size:20px}
+
+.section-anchor{scroll-margin-top:88px}
+.hero{min-height:calc(100vh - 74px);display:flex;align-items:center;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center;padding:92px 0}
+.hero-copy{position:relative;z-index:2}
+.eyebrow{margin:0 0 10px;color:var(--ice);font-size:11px;font-weight:900;letter-spacing:3px;text-transform:uppercase}
+.live-pill{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.025);font-size:11px;font-weight:900;letter-spacing:1.3px;margin-bottom:20px}
+.live-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#45e38a;box-shadow:0 0 12px #45e38a}
+.hero h1{font-family:Orbitron,sans-serif;font-size:clamp(55px,8.6vw,105px);line-height:.86;letter-spacing:-6px;margin:8px 0 28px;text-transform:uppercase}
+.hero h1 span,.section-head h2 span,.community-card h2 span,.contact-grid h2 span,.final-banner h2 span{color:var(--ice)}
+.hero-text{max-width:660px;color:var(--muted);font-size:20px;margin:0 0 28px}
+.button-row{display:flex;flex-wrap:wrap;gap:10px}
+.btn{border:1px solid var(--line);border-radius:12px;padding:12px 17px;display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;font-weight:900;transition:.2s;background:var(--card);color:var(--text);min-height:45px}
+.btn:hover{transform:translateY(-2px);border-color:rgba(121,232,255,.35);box-shadow:0 10px 30px rgba(0,0,0,.18)}
+.btn.primary{background:linear-gradient(135deg,#eaffff,var(--ice));border-color:transparent;color:#051015}
+.btn.dark{background:#0d1219}.btn.whatsapp{background:var(--green);color:#061109;border-color:var(--green)}
+.btn.outline{background:transparent}
+.hero-meta{display:flex;flex-wrap:wrap;gap:18px;color:#76808d;font-size:12px;font-weight:800;margin-top:22px}
+.hero-visual{min-height:470px;position:relative;display:grid;place-items:center}
+.stadium{width:min(510px,100%);aspect-ratio:1/1;border:1px solid rgba(121,232,255,.17);border-radius:35px;padding:25px;background:linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.015));box-shadow:var(--shadow);position:relative;transform:rotate(1deg)}
+.stadium-top,.stadium-bottom{font-family:Orbitron;font-size:9px;letter-spacing:3px;color:var(--ice);display:flex;justify-content:space-between}
+.stadium-bottom{color:#68727e;margin-top:15px}
+.pitch{position:absolute;left:25px;right:25px;top:60px;bottom:50px;border:1px solid rgba(196,247,255,.27);border-radius:5px;background:
+  linear-gradient(90deg,rgba(121,232,255,.035) 50%,rgba(255,255,255,.02) 50%),
+  repeating-linear-gradient(90deg,rgba(255,255,255,.025) 0 50px,transparent 50px 100px),
+  #0b1b20;overflow:hidden}
+.pitch:before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:rgba(196,247,255,.25)}
+.pitch-center{position:absolute;left:50%;top:50%;width:110px;height:110px;border:1px solid rgba(196,247,255,.28);border-radius:50%;transform:translate(-50%,-50%)}
+.pitch-center:after{content:"";position:absolute;width:9px;height:9px;background:var(--ice);border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%);box-shadow:0 0 18px var(--ice)}
+.box{position:absolute;top:31%;width:18%;height:38%;border:1px solid rgba(196,247,255,.27)}.box-left{left:0;border-left:0}.box-right{right:0;border-right:0}
+.penalty{position:absolute;top:40%;width:6%;height:20%;border:1px solid rgba(196,247,255,.25)}.penalty-left{left:12%;border-left:0}.penalty-right{right:12%;border-right:0}
+.ball-orb{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:65px;filter:drop-shadow(0 0 25px rgba(121,232,255,.25));animation:float 4s ease-in-out infinite}
+@keyframes float{50%{transform:translate(-50%,-57%) rotate(6deg)}}
+.floating-card{position:absolute;border:1px solid var(--line);background:rgba(10,14,19,.86);backdrop-filter:blur(12px);border-radius:15px;padding:13px 15px;display:flex;flex-direction:column;gap:1px;box-shadow:var(--shadow)}
+.floating-card b{font-family:Orbitron;color:var(--ice);font-size:18px}.floating-card span{font-size:9px;color:var(--muted);letter-spacing:2px;font-weight:900}.fc-one{left:-15px;top:90px}.fc-two{right:-5px;bottom:80px}
+
+.scroll-cue{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);font-size:9px;color:#5d6672;letter-spacing:3px;font-weight:900}.scroll-cue span{color:var(--ice);font-size:14px}
+.ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;background:rgba(255,255,255,.018);white-space:nowrap}
+.ticker-track{display:flex;justify-content:center;align-items:center;gap:22px;padding:13px;font-family:Orbitron;font-size:10px;letter-spacing:2px;color:#7f8995;animation:ticker 28s linear infinite;width:max-content;min-width:100%}
+.ticker-track span:nth-child(1),.ticker-track span:nth-last-child(1){color:var(--ice)}.ticker-track i{font-style:normal;color:#39434f}
+@keyframes ticker{to{transform:translateX(-30%)}}
+
+.section{padding:95px 0}.dark-section{background:linear-gradient(180deg,rgba(255,255,255,.018),rgba(255,255,255,.008));border-top:1px solid rgba(255,255,255,.025);border-bottom:1px solid rgba(255,255,255,.025)}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:32px}
+.section-head h2,.contact-grid h2,.final-banner h2{font-family:Orbitron;font-size:clamp(30px,5vw,52px);line-height:1;margin:5px 0 10px;letter-spacing:-2px}
+.section-head>div:first-child>p:last-child{color:var(--muted);margin:0;max-width:700px}
+.head-tools{display:flex;flex-wrap:wrap;gap:7px}
+.small-btn{border:1px solid var(--line);background:var(--card);color:var(--muted);border-radius:9px;padding:8px 11px;font-size:12px;font-weight:900}
+.small-btn:hover,.small-btn.selected{color:var(--text);border-color:var(--ice);background:rgba(121,232,255,.07)}
+.search-bar{display:flex;align-items:center;gap:10px;border:1px solid var(--line);background:var(--card);border-radius:14px;padding:0 14px;margin-bottom:20px}
+.search-bar>span{font-size:24px;color:var(--ice)}.search-bar input{width:100%;height:49px;border:0;outline:0;background:transparent;color:var(--text)}.search-bar input::placeholder{color:#68727f}
+.clear-search{background:none;border:0;color:var(--muted);font-size:22px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:.22s;box-shadow:0 12px 45px rgba(0,0,0,.12)}
+.card:hover{transform:translateY(-5px);border-color:rgba(121,232,255,.25)}
+.update-visual{height:190px;position:relative;overflow:hidden;background:#0d151b}
+.update-visual:before{content:"";position:absolute;inset:0;background:
+  radial-gradient(circle at 25% 25%,rgba(121,232,255,.3),transparent 24%),
+  radial-gradient(circle at 78% 70%,rgba(255,210,28,.18),transparent 28%),
+  linear-gradient(135deg,#111c25,#071016)}
+.update-visual .visual-code{position:absolute;left:20px;bottom:15px;font-family:Orbitron;font-size:30px;font-weight:900;color:rgba(255,255,255,.1);letter-spacing:3px}
+.update-visual .visual-ball{position:absolute;right:20px;top:30px;font-size:70px;filter:drop-shadow(0 0 18px rgba(121,232,255,.2))}
+.card-body{padding:19px}.tag{font-size:10px;letter-spacing:2px;color:var(--ice);font-weight:900}.card h3{font-family:Orbitron;font-size:17px;line-height:1.25;margin:7px 0}.card p{color:var(--muted);margin:0 0 15px;font-size:14px}
+.card-actions{display:flex;align-items:center;justify-content:space-between;gap:8px;border-top:1px solid var(--line);padding-top:13px}
+.card-actions button{border:0;background:transparent;color:#77818e;font-size:12px;font-weight:900;padding:4px}.card-actions button:hover,.card-actions button.saved,.card-actions button.liked{color:var(--ice)}
+.empty-state{text-align:center;border:1px dashed var(--line);border-radius:18px;padding:45px;color:var(--muted)}.empty-state div{font-size:42px}.empty-state h3{color:var(--text);font-family:Orbitron}
+
+.status-chip{border:1px solid rgba(69,227,138,.22);color:#75eaa5;background:rgba(69,227,138,.05);padding:9px 12px;border-radius:999px;font-size:11px;font-weight:900;white-space:nowrap}
+.match-layout{display:grid;grid-template-columns:1.05fr .95fr;gap:18px}
+.match-feature,.match-item{border:1px solid var(--line);background:var(--card);border-radius:20px}
+.match-feature{padding:28px;min-height:300px;position:relative;overflow:hidden}
+.match-feature:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 10%,rgba(121,232,255,.12),transparent 30%)}
+.match-feature>*{position:relative}
+.match-label{font-size:10px;letter-spacing:2px;color:var(--ice);font-weight:900}.match-date{color:var(--muted);font-size:12px}
+.scoreboard{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;margin:45px 0 28px;text-align:center}.team b{display:block;font-family:Orbitron;font-size:15px}.team small{color:var(--muted)}.score{font-family:Orbitron;font-size:33px}.versus{color:var(--muted);font-size:10px}
+.match-actions{display:flex;gap:8px}.match-actions button{flex:1}
+.match-list{display:grid;gap:10px;max-height:350px;overflow:auto;padding-right:4px}
+.match-item{padding:16px;display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center}.match-item:hover{border-color:rgba(121,232,255,.2)}
+.match-item b{font-family:Orbitron;font-size:12px}.match-item small{display:block;color:var(--muted)}.match-status{font-size:10px;color:#73e99f;font-weight:900}.match-score{font-family:Orbitron;font-size:17px}
+
+.tactics-layout{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+.formation-panel,.feature-card{background:var(--card);border:1px solid var(--line);border-radius:20px}
+.formation-panel{padding:20px}.formation-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:15px}.formation-head strong{font-family:Orbitron;display:block}.formation-head span{font-size:11px;color:var(--muted)}select{border:1px solid var(--line);background:var(--bg2);color:var(--text);padding:9px;border-radius:9px;outline:0}
+.football-board{aspect-ratio:1.55/1;position:relative;overflow:hidden;border:1px solid rgba(121,232,255,.2);border-radius:10px;background:
+  repeating-linear-gradient(90deg,rgba(255,255,255,.025) 0 45px,transparent 45px 90px),
+  linear-gradient(90deg,#0b2a25,#0d3a2c 50%,#0b2a25)}
+.football-board:before{content:"";position:absolute;inset:3%;border:1px solid rgba(255,255,255,.3);border-radius:2px}
+.center-line{position:absolute;left:50%;top:3%;bottom:3%;width:1px;background:rgba(255,255,255,.3)}.board-circle{position:absolute;width:25%;aspect-ratio:1;border:1px solid rgba(255,255,255,.3);left:50%;top:50%;transform:translate(-50%,-50%);border-radius:50%}
+.board-box{position:absolute;top:31%;height:38%;width:15%;border:1px solid rgba(255,255,255,.3)}.left-box{left:3%;border-left:0}.right-box{right:3%;border-right:0}
+.board-goal{position:absolute;top:42%;height:16%;width:3%;border:1px solid rgba(255,255,255,.35)}.left-goal{left:0}.right-goal{right:0}
+.player-dot{position:absolute;transform:translate(-50%,-50%);width:39px;height:39px;border-radius:50%;border:2px solid var(--ice);background:#08151a;display:grid;place-items:center;font-family:Orbitron;font-size:9px;font-weight:900;color:white;box-shadow:0 0 18px rgba(121,232,255,.18);cursor:pointer;z-index:3;transition:.15s}
+.player-dot:hover{transform:translate(-50%,-50%) scale(1.12);background:#10242b}
+.player-dot.gk{border-color:var(--gold);color:var(--gold)}
+.tactics-info{display:grid;gap:12px}.feature-card{padding:22px}.feature-icon{font-size:24px}.feature-card h3{font-family:Orbitron;font-size:16px;margin:8px 0}.feature-card p{color:var(--muted);font-size:14px;margin:0}
+
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.gallery-card{height:205px;border-radius:16px;overflow:hidden;border:1px solid var(--line);position:relative;cursor:pointer;background:#0b1016}
+.gallery-card:before{content:"";position:absolute;inset:0;background:
+  radial-gradient(circle at 30% 25%,var(--g1),transparent 25%),
+  radial-gradient(circle at 80% 70%,var(--g2),transparent 30%),
+  linear-gradient(145deg,#151e26,#080c11)}
+.gallery-card:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 50%,rgba(0,0,0,.75))}
+.gallery-content{position:absolute;z-index:2;left:16px;right:16px;bottom:14px}.gallery-content b{font-family:Orbitron;font-size:13px}.gallery-content small{display:block;color:#a8b2bd;margin-top:3px}
+
+.community-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:18px}
+.community-card{border:1px solid var(--line);background:linear-gradient(145deg,rgba(121,232,255,.06),rgba(255,255,255,.015));border-radius:22px;padding:34px}
+.community-card.compact{display:grid;grid-template-columns:1fr 1fr;gap:15px;align-content:start}
+.community-card h2{font-family:Orbitron;font-size:clamp(28px,5vw,48px);line-height:1;margin:5px 0 12px}.community-card>p{color:var(--muted);max-width:650px}.number-label{display:block;color:var(--ice);font-weight:900;letter-spacing:2px;margin-top:15px}
+.community-stat{border:1px solid var(--line);border-radius:14px;padding:15px;background:rgba(255,255,255,.02)}.community-stat b{display:block;font-family:Orbitron;font-size:24px}.community-stat span{font-size:11px;color:var(--muted)}.community-card hr{border:0;border-top:1px solid var(--line);width:100%;grid-column:1/-1;margin:0}.micro{font-size:11px!important;color:#68727f!important;grid-column:1/-1}
+
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:start}.contact-list{display:grid;gap:10px;margin-top:25px}.contact-list a,.contact-list button{display:grid;grid-template-columns:35px 1fr;grid-template-rows:auto auto;column-gap:9px;text-decoration:none;text-align:left;border:1px solid var(--line);background:var(--card);color:var(--text);padding:14px;border-radius:13px}.contact-list a span,.contact-list button span{grid-row:1/3;align-self:center;font-size:22px}.contact-list small{color:var(--muted)}.contact-form{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;display:grid;gap:14px}.contact-form label{font-size:12px;font-weight:900;color:var(--muted)}.contact-form input,.contact-form textarea{display:block;width:100%;margin-top:7px;border:1px solid var(--line);background:var(--bg2);color:var(--text);border-radius:11px;padding:12px;outline:0}.contact-form textarea{min-height:140px;resize:vertical}.contact-form input:focus,.contact-form textarea:focus{border-color:var(--ice)}.form-note{font-size:11px;color:#68727f;margin:0}
+
+.final-section{padding-top:20px}.final-banner{border:1px solid rgba(121,232,255,.2);border-radius:25px;padding:40px;background:linear-gradient(110deg,rgba(121,232,255,.07),rgba(255,210,28,.04));display:flex;align-items:center;justify-content:space-between;gap:20px}.final-banner h2{margin-bottom:0}
+
+.footer{border-top:1px solid var(--line);padding:38px 0;color:var(--muted)}.footer-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:25px;align-items:center}.footer p{margin:9px 0 0;font-size:13px}.footer-links{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}.footer-links a{font-size:12px;text-decoration:none}.footer-links a:hover,.footer-right>a{color:var(--ice)}.footer-right{text-align:right}.footer-right>a{display:block;font-size:12px;text-decoration:none}.footer-right small{display:block;margin-top:8px}
+
+.toast{position:fixed;right:18px;bottom:18px;z-index:1000;background:#101821;border:1px solid rgba(121,232,255,.25);color:white;padding:12px 15px;border-radius:12px;box-shadow:var(--shadow);transform:translateY(30px);opacity:0;pointer-events:none;transition:.25s;font-size:13px;max-width:330px}.toast.show{transform:translateY(0);opacity:1}
+.modal{position:fixed;inset:0;z-index:900;display:grid;place-items:center;padding:20px}.modal-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.75);backdrop-filter:blur(8px)}.modal-box,.image-modal-box{position:relative;z-index:2;width:min(680px,100%);max-height:90vh;overflow:auto;background:var(--card);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);padding:27px}.image-modal-box{width:min(850px,100%);padding:15px}.modal-close{position:absolute;right:13px;top:10px;width:37px;height:37px;border-radius:10px;border:1px solid var(--line);background:rgba(0,0,0,.3);color:white;font-size:23px;z-index:3}.modal-hero{height:210px;border-radius:14px;margin-bottom:18px;display:grid;place-items:center;background:linear-gradient(145deg,#101c25,#070a0f);font-size:80px}.modal-box h2{font-family:Orbitron}.modal-box p{color:var(--muted)}.modal-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.image-preview{height:min(70vh,600px);border-radius:14px;display:grid;place-items:center;position:relative;overflow:hidden;background:
+  radial-gradient(circle at 25% 25%,var(--g1),transparent 25%),
+  radial-gradient(circle at 75% 70%,var(--g2),transparent 30%),
+  linear-gradient(145deg,#121c24,#06090d)}
+.image-preview .big-symbol{font-size:120px;filter:drop-shadow(0 0 25px rgba(121,232,255,.18))}.image-preview .caption{position:absolute;bottom:20px;left:20px;font-family:Orbitron;font-size:16px}
+
+@media(max-width:900px){
+  .nav-actions{display:flex}.menu{display:none;position:absolute;left:0;right:0;top:74px;background:rgba(5,7,11,.98);border-bottom:1px solid var(--line);padding:12px 4%;flex-direction:column;align-items:stretch;gap:0}
+  .menu.open{display:flex}.nav-link{padding:14px 0}.nav-link:after{bottom:8px}.hero-grid{grid-template-columns:1fr;gap:30px}.hero{min-height:auto}.hero-grid{padding:70px 0}.hero-visual{min-height:390px}.fc-one{left:0}.fc-two{right:0}
+  .cards{grid-template-columns:1fr 1fr}.match-layout,.tactics-layout,.community-grid,.contact-grid{grid-template-columns:1fr}.gallery-grid{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr;text-align:left}.footer-links{justify-content:flex-start}.footer-right{text-align:left}
+}
+@media(max-width:620px){
+  .section{padding:70px 0}.section-head{display:block}.head-tools{margin-top:15px}.cards{grid-template-columns:1fr}.gallery-grid{grid-template-columns:1fr}.hero h1{font-size:58px;letter-spacing:-4px}.hero-text{font-size:17px}.hero-visual{min-height:340px}.stadium{width:100%}.floating-card{display:none}.scoreboard{margin:35px 0 25px}.community-card{padding:24px}.community-card.compact{grid-template-columns:1fr 1fr}.final-banner{display:block}.final-banner .btn{margin-top:20px}.footer-grid{gap:18px}
+}
+@media(max-width:390px){.community-card.compact{grid-template-columns:1fr}.hero h1{font-size:50px}.button-row .btn{width:100%}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+  
+/* Self-contained eFootball arena background — no external image required. */
+.site-bg{
+  position:fixed; inset:0; z-index:-10; overflow:hidden;
+  background:
+    radial-gradient(ellipse at 50% 112%, rgba(44,190,125,.24), transparent 34%),
+    radial-gradient(ellipse at 50% 76%, rgba(48,118,91,.13), transparent 44%),
+    linear-gradient(180deg,#020409 0%,#06101a 42%,#07120f 100%);
+}
+.site-bg:before{
+  content:""; position:absolute; left:50%; top:38%; width:140vmax; height:82vmax;
+  transform:translate(-50%,-50%) perspective(900px) rotateX(57deg);
+  transform-origin:center;
+  background:
+    repeating-linear-gradient(90deg,rgba(119,244,203,.035) 0 2px,transparent 2px 130px),
+    repeating-linear-gradient(0deg,rgba(255,255,255,.028) 0 2px,transparent 2px 82px);
+  border:2px solid rgba(121,232,255,.11);
+  box-shadow:inset 0 0 100px rgba(0,0,0,.7),0 0 120px rgba(37,211,102,.08);
+  opacity:.8;
+}
+.site-bg:after{
+  content:""; position:absolute; left:50%; bottom:-12%; width:72vmin; height:72vmin;
+  transform:translateX(-50%);
+  border:2px solid rgba(121,232,255,.16); border-radius:50%;
+  box-shadow:0 0 0 90px rgba(121,232,255,.018),0 0 80px rgba(121,232,255,.06);
+}
+.pitch-lines{
+  position:absolute; left:50%; top:56%; width:min(1100px,96vw); height:520px;
+  transform:translate(-50%,-50%) perspective(700px) rotateX(52deg);
+  border:2px solid rgba(190,255,235,.13); border-radius:3px;
+  box-shadow:inset 0 0 55px rgba(0,0,0,.8),0 0 40px rgba(121,232,255,.04);
+}
+.pitch-lines:before{
+  content:""; position:absolute; left:50%; top:0; bottom:0;
+  width:2px; background:rgba(255,255,255,.1);
+}
+.pitch-lines:after{
+  content:""; position:absolute; left:50%; top:50%; width:145px; height:145px;
+  transform:translate(-50%,-50%); border:2px solid rgba(255,255,255,.1); border-radius:50%;
+}
+.glow{position:absolute;border-radius:50%;filter:blur(70px);opacity:.28}
+.glow-a{width:420px;height:420px;left:-120px;top:18%;background:#176dff}
+.glow-b{width:380px;height:380px;right:-120px;bottom:5%;background:#16d18a}
+.grain{
+  position:absolute;inset:0;opacity:.05;
+  background-image:radial-gradient(rgba(255,255,255,.9) .7px,transparent .7px);
+  background-size:5px 5px;
+}
+@media(max-width:700px){
+  .pitch-lines{width:120vw;height:430px;top:57%}
+  .site-bg:before{width:180vmax}
+}
+
+  </style>
+</head>
+<body>
+  <div class="site-bg" aria-hidden="true">
+    <div class="pitch-lines"></div>
+    <div class="glow glow-a"></div>
+    <div class="glow glow-b"></div>
+    <div class="grain"></div>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <header class="header" id="top">
+    <nav class="navbar container">
+      <a class="logo" href="#home" aria-label="BIGGEST EMPIRE home">
+        <span class="logo-mark">❄</span>
+        <span><b>BIGGEST</b><em>EMPIRE</em></span>
+      </a>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeBtn" aria-label="Toggle visual mode" title="Toggle visual mode">◐</button>
+        <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+      </div>
+
+      <div class="menu" id="mainMenu">
+        <a class="nav-link active" href="#home">Home</a>
+        <a class="nav-link" href="#updates">Updates</a>
+        <a class="nav-link" href="#matches">Matches</a>
+        <a class="nav-link" href="#tactics">Tactics</a>
+        <a class="nav-link" href="#gallery">Gallery</a>
+        <a class="nav-link" href="#community">Community</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-anchor" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="live-pill"><span class="live-dot"></span> EMPIRE ONLINE <span id="visitorCount">128</span> visitors</div>
+          <p class="eyebrow">⚡ eFOOTBALL • GAMING • COMMUNITY</p>
+          <h1>BIGGEST<br><span>EMPIRE</span></h1>
+          <p class="hero-text">
+            The gaming hub for eFootball updates, match stories, tactical ideas,
+            community content and the latest Empire announcements.
+          </p>
+          <div class="button-row">
+            <a class="btn primary" href="#updates">Explore Updates <span>→</span></a>
+            <button class="btn dark" id="shareBtn">↗ Share Empire</button>
+            <a class="btn whatsapp" href="https://wa.me/2330502277502?text=Hello%20BIGGEST%20EMPIRE%2C%20I%20want%20to%20join." target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+          <div class="hero-meta">
+            <span>❄ Stay cold</span><span>⚽ Play smart</span><span>🔥 Build the Empire</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="stadium">
+            <div class="stadium-top">BIGGEST EMPIRE ARENA</div>
+            <div class="pitch">
+              <div class="pitch-center"></div>
+              <div class="box box-left"></div>
+              <div class="box box-right"></div>
+              <div class="penalty penalty-left"></div>
+              <div class="penalty penalty-right"></div>
+              <div class="ball-orb">⚽</div>
+            </div>
+            <div class="stadium-bottom">
+              <span>PLAY</span><span>UPDATE</span><span>CONNECT</span>
+            </div>
+          </div>
+          <div class="floating-card fc-one"><b>01</b><span>TACTICS</span></div>
+          <div class="floating-card fc-two"><b>ICE</b><span>MENTALITY</span></div>
+        </div>
+      </div>
+      <div class="scroll-cue">SCROLL <span>↓</span></div>
+    </section>
+
+    <section class="ticker" aria-label="Empire ticker">
+      <div class="ticker-track" id="tickerTrack">
+        <span>❄ BIGGEST EMPIRE</span><i>•</i><span>eFOOTBALL UPDATES</span><i>•</i>
+        <span>TACTICS & MATCHES</span><i>•</i><span>COMMUNITY CONTENT</span><i>•</i>
+        <span>INFINITY EFB DEALS</span><i>•</i><span>❄ BIGGEST EMPIRE</span>
+      </div>
+    </section>
+
+    <section class="section section-anchor" id="updates">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">LATEST NEWS</p>
+            <h2>Empire <span>Updates</span></h2>
+            <p>Search, filter and save the content that matters to you.</p>
+          </div>
+          <div class="head-tools">
+            <button class="small-btn" data-filter="all">All</button>
+            <button class="small-btn" data-filter="news">News</button>
+            <button class="small-btn" data-filter="tips">Tips</button>
+            <button class="small-btn" data-filter="event">Events</button>
+          </div>
+        </div>
+
+        <div class="search-bar">
+          <span>⌕</span>
+          <input id="updateSearch" type="search" placeholder="Search updates, tactics, events..." autocomplete="off">
+          <button id="clearSearch" class="clear-search" aria-label="Clear search">×</button>
+        </div>
+
+        <div class="cards update-grid" id="updateGrid"></div>
+        <div id="emptyUpdates" class="empty-state hidden">
+          <div>🧊</div><h3>No update found</h3><p>Try another search term or category.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark-section section-anchor" id="matches">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">MATCH CENTER</p>
+            <h2>Empire <span>Fixtures</span></h2>
+            <p>Track the site's sample fixtures, results and countdowns. Replace the sample data with your own matches.</p>
+          </div>
+          <div class="status-chip"><span class="live-dot"></span> Local match center</div>
+        </div>
+
+        <div class="match-layout">
+          <div class="match-feature" id="featuredMatch"></div>
+          <div class="match-list" id="matchList"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-anchor" id="tactics">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">TACTICAL LAB</p>
+            <h2>Build your <span>game plan</span></h2>
+            <p>Use the interactive squad board to experiment with a formation before a match.</p>
+          </div>
+        </div>
+
+        <div class="tactics-layout">
+          <div class="formation-panel">
+            <div class="formation-head">
+              <div>
+                <strong id="formationName">4-3-3</strong>
+                <span>Interactive board</span>
+              </div>
+              <select id="formationSelect" aria-label="Choose formation">
+                <option value="433">4-3-3</option>
+                <option value="4231">4-2-3-1</option>
+                <option value="442">4-4-2</option>
+                <option value="352">3-5-2</option>
+                <option value="451">4-5-1</option>
+              </select>
+            </div>
+            <div class="football-board" id="footballBoard">
+              <div class="board-line center-line"></div>
+              <div class="board-circle"></div>
+              <div class="board-box left-box"></div>
+              <div class="board-box right-box"></div>
+              <div class="board-goal left-goal"></div>
+              <div class="board-goal right-goal"></div>
+              <div id="playersLayer"></div>
+            </div>
+          </div>
+
+          <div class="tactics-info">
+            <article class="feature-card">
+              <span class="feature-icon">🧠</span>
+              <h3>Read the space</h3>
+              <p>Move the ball to create advantages instead of forcing the same attack every time.</p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-icon">🎯</span>
+              <h3>Attack with purpose</h3>
+              <p>Use width, third-man runs and timing to create cleaner chances.</p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-icon">❄️</span>
+              <h3>Stay composed</h3>
+              <p>When the match becomes chaotic, slow down the decision and protect possession.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark-section section-anchor" id="gallery">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">EMPIRE MEDIA</p>
+            <h2>Gallery <span>Vault</span></h2>
+            <p>Click a card to open the full-size visual. These are CSS-generated placeholders until you add your own images.</p>
+          </div>
+          <button class="small-btn" id="randomGallery">Shuffle</button>
+        </div>
+        <div class="gallery-grid" id="galleryGrid"></div>
+      </div>
+    </section>
+
+    <section class="section section-anchor" id="community">
+      <div class="container">
+        <div class="community-grid">
+          <div class="community-card">
+            <p class="eyebrow">THE EMPIRE</p>
+            <h2>Join the <span>community</span></h2>
+            <p>Connect with BIGGEST EMPIRE through WhatsApp and receive community announcements.</p>
+            <div class="button-row">
+              <a class="btn whatsapp" href="https://wa.me/2330502277502?text=Hello%20BIGGEST%20EMPIRE%2C%20I%20want%20to%20join%20the%20community." target="_blank" rel="noopener">💬 Join WhatsApp</a>
+              <button class="btn dark" id="copyNumber">Copy Number</button>
+            </div>
+            <small class="number-label">+233 050 227 7502</small>
+          </div>
+
+          <div class="community-card compact">
+            <div class="community-stat"><b id="savedCount">0</b><span>Saved posts</span></div>
+            <div class="community-stat"><b id="reactionCount">0</b><span>Reactions</span></div>
+            <div class="community-stat"><b id="visitCount">1</b><span>Your visits</span></div>
+            <hr>
+            <button class="btn outline full" id="resetPrefs">Reset local preferences</button>
+            <p class="micro">Your saved posts, reactions and preferences are stored only in this browser.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-anchor" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <div>
+            <p class="eyebrow">CONTACT</p>
+            <h2>Talk to <span>ICEMAN</span></h2>
+            <p class="muted large">For website projects, gaming community questions, collaborations or Empire updates, start a WhatsApp conversation.</p>
+            <div class="contact-list">
+              <a href="https://wa.me/2330502277502?text=Hello%20BIGGEST%20EMPIRE%2C%20I%20want%20to%20contact%20you." target="_blank" rel="noopener"><span>💬</span><b>WhatsApp</b><small>+233 050 227 7502</small></a>
+              <button id="emailFallback"><span>✉</span><b>Email</b><small>Set your email in app.js</small></button>
+            </div>
+          </div>
+          <form class="contact-form" id="contactForm">
+            <label>Your name<input id="contactName" required maxlength="60" placeholder="Enter your name"></label>
+            <label>Message<textarea id="contactMessage" required maxlength="500" placeholder="What would you like to discuss?"></textarea></label>
+            <button class="btn primary full" type="submit">Open WhatsApp Message →</button>
+            <p class="form-note">The form does not send data to a server. It opens your WhatsApp conversation with the message you enter.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section final-section">
+      <div class="container">
+        <div class="final-banner">
+          <div>
+            <p class="eyebrow">BIGGEST EMPIRE</p>
+            <h2>Don't chase the <span>meta.</span><br>Freeze it.</h2>
+          </div>
+          <a class="btn primary" href="#top">Back to top ↑</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal hidden" id="postModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-box">
+      <button class="modal-close" data-close-modal aria-label="Close">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <div class="modal hidden" id="imageModal" role="dialog" aria-modal="true" aria-label="Gallery image">
+    <div class="modal-backdrop" data-close-image></div>
+    <div class="image-modal-box">
+      <button class="modal-close" data-close-image aria-label="Close">×</button>
+      <div id="imagePreview"></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="logo" href="#home"><span class="logo-mark">❄</span><span><b>BIGGEST</b><em>EMPIRE</em></span></a>
+        <p>eFootball • Gaming • Community</p>
+      </div>
+      <div class="footer-links">
+        <a href="#updates">Updates</a><a href="#matches">Matches</a><a href="#tactics">Tactics</a><a href="#gallery">Gallery</a>
+      </div>
+      <div class="footer-right">
+        <a href="https://wa.me/2330502277502" target="_blank" rel="noopener">WhatsApp: +233 050 227 7502</a>
+        <small>© <span id="year"></span> BIGGEST EMPIRE</small>
+      </div>
+    </div>
+  </footer>
+
+  <script id="biggest-empire-app">
+/*
+  BIGGEST EMPIRE - client-side feature engine
+  Static-site friendly: no server, no database, no API key required.
+  Persistent data uses localStorage in the visitor's browser.
+*/
+
+const CONFIG = {
+  whatsapp: "2330502277502",
+  whatsappDisplay: "+233 050 227 7502",
+  contactEmail: "",
+  storageKey: "biggest_empire_v2",
+  siteName: "BIGGEST EMPIRE"
+};
+
+const state = {
+  filter: "all",
+  search: "",
+  posts: [
+    {
+      id:"update-1", category:"news", tag:"NEWS", title:"Empire Update Center",
+      text:"Use this card for your latest eFootball announcement, version news or community bulletin.",
+      date:"Today", symbol:"⚡", accent:["#79e8ff","#5a7cff"], reactions:14
+    },
+    {
+      id:"update-2", category:"tips", tag:"TACTICS", title:"Cold Finishing Principles",
+      text:"Create the opening, stay patient and choose the finish instead of rushing the final action.",
+      date:"This week", symbol:"❄️", accent:["#79e8ff","#b8f5ff"], reactions:27
+    },
+    {
+      id:"update-3", category:"event", tag:"EVENT", title:"Empire Match Night",
+      text:"Create your own community fixture here. Add the date, opponent and competition details.",
+      date:"Upcoming", symbol:"🏆", accent:["#ffd21c","#ff7b00"], reactions:9
+    },
+    {
+      id:"update-4", category:"news", tag:"COMMUNITY", title:"Welcome to the Empire",
+      text:"A central place for screenshots, gaming stories, tactics, announcements and community projects.",
+      date:"Pinned", symbol:"🧊", accent:["#b8f5ff","#3f7dff"], reactions:36
+    },
+    {
+      id:"update-5", category:"tips", tag:"GAMEPLAY", title:"Protect the Middle",
+      text:"Use compact positioning when defending central areas and force the opponent toward less dangerous zones.",
+      date:"Guide", symbol:"🎯", accent:["#8df5ad","#2cae69"], reactions:18
+    },
+    {
+      id:"update-6", category:"event", tag:"DEALS", title:"Infinity EFB Deals",
+      text:"Reserve this space for verified gaming deals, offers or projects. Add real details before publishing.",
+      date:"Featured", symbol:"🔥", accent:["#ffcc42","#ff5e4d"], reactions:22
+    }
+  ],
+  matches: [
+    {id:"m1", status:"UPCOMING", date:"SAT • 20:00", home:"ICEMAN XI", away:"EMPIRE FC", score:"— : —"},
+    {id:"m2", status:"RESULT", date:"FRI • 21:00", home:"ICE SQUAD", away:"GOLDEN XI", score:"3 : 2"},
+    {id:"m3", status:"RESULT", date:"WED • 19:30", home:"EMPIRE FC", away:"KUMASI STARS", score:"2 : 2"},
+    {id:"m4", status:"UPCOMING", date:"SUN • 18:00", home:"BIGGEST XI", away:"TACTIC BOYS", score:"— : —"},
+    {id:"m5", status:"RESULT", date:"MON • 20:30", home:"ICE SQUAD", away:"RIVAL FC", score:"4 : 1"}
+  ],
+  gallery: [
+    {title:"ICE MODE", subtitle:"Matchday", symbol:"❄️", g1:"#79e8ff", g2:"#4169ff"},
+    {title:"EMPIRE NIGHT", subtitle:"Community", symbol:"🏟️", g1:"#ffd21c", g2:"#ff7b00"},
+    {title:"TACTICAL LAB", subtitle:"Formation", symbol:"🧠", g1:"#c4f7ff", g2:"#3a72ff"},
+    {title:"MATCH READY", subtitle:"eFootball", symbol:"⚽", g1:"#8df5ad", g2:"#178f6a"},
+    {title:"COLD FINISH", subtitle:"Gameplay", symbol:"🎯", g1:"#ffcc42", g2:"#ff4d5a"},
+    {title:"EMPIRE ENERGY", subtitle:"Gaming", symbol:"🔥", g1:"#ff9f00", g2:"#ff3e71"},
+    {title:"THE ARENA", subtitle:"Community", symbol:"🏆", g1:"#79e8ff", g2:"#7557ff"},
+    {title:"BIGGEST", subtitle:"Identity", symbol:"⚡", g1:"#ffffff", g2:"#79e8ff"}
+  ]
+};
+
+const formations = {
+  "433": {
+    name:"4-3-3",
+    players:[
+      ["GK","gk",8,50],["LB","",24,18],["CB","",28,40],["CB","",28,60],["RB","",24,82],
+      ["CM","",46,30],["DM","",49,50],["CM","",46,70],
+      ["LW","",75,18],["CF","",82,50],["RW","",75,82]
+    ]
+  },
+  "4231": {
+    name:"4-2-3-1",
+    players:[
+      ["GK","gk",8,50],["LB","",24,18],["CB","",28,40],["CB","",28,60],["RB","",24,82],
+      ["DM","",43,38],["DM","",43,62],["AM","",61,50],
+      ["LW","",70,18],["CF","",82,50],["RW","",70,82]
+    ]
+  },
+  "442": {
+    name:"4-4-2",
+    players:[
+      ["GK","gk",8,50],["LB","",24,18],["CB","",28,40],["CB","",28,60],["RB","",24,82],
+      ["LM","",48,15],["CM","",48,40],["CM","",48,60],["RM","",48,85],
+      ["CF","",80,40],["CF","",80,60]
+    ]
+  },
+  "352": {
+    name:"3-5-2",
+    players:[
+      ["GK","gk",8,50],["CB","",27,32],["CB","",27,50],["CB","",27,68],
+      ["LWB","",47,12],["CM","",46,34],["DM","",48,50],["CM","",46,66],["RWB","",47,88],
+      ["CF","",80,40],["CF","",80,60]
+    ]
+  },
+  "451": {
+    name:"4-5-1",
+    players:[
+      ["GK","gk",8,50],["LB","",24,18],["CB","",28,40],["CB","",28,60],["RB","",24,82],
+      ["LM","",48,13],["CM","",47,32],["DM","",49,50],["CM","",47,68],["RM","",48,87],
+      ["CF","",82,50]
+    ]
+  }
+};
+
+const $ = (selector, root=document) => root.querySelector(selector);
+const $$ = (selector, root=document) => [...root.querySelectorAll(selector)];
+
+function loadStore(){
+  try{
+    return JSON.parse(localStorage.getItem(CONFIG.storageKey)) || {
+      saved:[], liked:[], reactions:{}, theme:"dark", visits:0
+    };
+  }catch{
+    return {saved:[],liked:[],reactions:{},theme:"dark",visits:0};
+  }
+}
+let store = loadStore();
+
+function saveStore(){
+  localStorage.setItem(CONFIG.storageKey, JSON.stringify(store));
+  updateCommunityStats();
+}
+
+function toast(message){
+  const el = $("#toast");
+  if(!el) return;
+  el.textContent = message;
+  el.classList.add("show");
+  clearTimeout(toast.timer);
+  toast.timer = setTimeout(()=>el.classList.remove("show"),2600);
+}
+
+function escapeHTML(value){
+  return String(value).replace(/[&<>"']/g, ch => ({
+    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"
+  }[ch]));
+}
+
+function renderUpdates(){
+  const grid = $("#updateGrid");
+  const empty = $("#emptyUpdates");
+  if(!grid) return;
+
+  const q = state.search.trim().toLowerCase();
+  const visible = state.posts.filter(post => {
+    const categoryOK = state.filter === "all" || post.category === state.filter;
+    const text = `${post.title} ${post.text} ${post.tag}`.toLowerCase();
+    return categoryOK && (!q || text.includes(q));
+  });
+
+  grid.innerHTML = visible.map(post => {
+    const saved = store.saved.includes(post.id);
+    const liked = store.liked.includes(post.id);
+    const reaction = Number(store.reactions[post.id] || post.reactions || 0);
+    return `
+      <article class="card update-card">
+        <div class="update-visual" style="--g1:${post.accent[0]};--g2:${post.accent[1]}">
+          <span class="visual-code">${escapeHTML(post.tag)}</span>
+          <span class="visual-ball">${post.symbol}</span>
+        </div>
+        <div class="card-body">
+          <span class="tag">${escapeHTML(post.tag)}</span>
+          <h3>${escapeHTML(post.title)}</h3>
+          <p>${escapeHTML(post.text)}</p>
+          <div class="card-actions">
+            <span>${escapeHTML(post.date)}</span>
+            <div>
+              <button class="${liked ? "liked" : ""}" data-action="like" data-id="${post.id}">♥ ${reaction}</button>
+              <button class="${saved ? "saved" : ""}" data-action="save" data-id="${post.id}">${saved ? "★ Saved" : "☆ Save"}</button>
+              <button data-action="open" data-id="${post.id}">Read →</button>
+            </div>
+          </div>
+        </div>
+      </article>`;
+  }).join("");
+
+  empty.classList.toggle("hidden", visible.length !== 0);
+}
+
+function openPost(id){
+  const post = state.posts.find(x=>x.id===id);
+  if(!post) return;
+  const modal = $("#postModal");
+  $("#modalContent").innerHTML = `
+    <div class="modal-hero" style="background:radial-gradient(circle at 30% 25%,${post.accent[0]}55,transparent 30%),linear-gradient(145deg,#101c25,#070a0f)">${post.symbol}</div>
+    <span class="tag">${escapeHTML(post.tag)}</span>
+    <h2 id="modalTitle">${escapeHTML(post.title)}</h2>
+    <p>${escapeHTML(post.text)}</p>
+    <p><b>Published:</b> ${escapeHTML(post.date)}</p>
+    <div class="modal-actions">
+      <button class="btn primary" data-modal-like="${post.id}">♥ React</button>
+      <button class="btn dark" data-modal-save="${post.id}">☆ Save post</button>
+      <button class="btn dark" data-modal-share="${post.id}">↗ Share</button>
+    </div>`;
+  modal.classList.remove("hidden");
+  document.body.style.overflow="hidden";
+}
+
+function closeModal(id){
+  const modal = $(id);
+  if(modal){modal.classList.add("hidden");document.body.style.overflow="";}
+}
+
+function toggleLike(id){
+  if(store.liked.includes(id)){
+    store.liked = store.liked.filter(x=>x!==id);
+    store.reactions[id] = Math.max(0,Number(store.reactions[id]||0)-1);
+    toast("Reaction removed.");
+  }else{
+    store.liked.push(id);
+    store.reactions[id] = Number(store.reactions[id]||0)+1;
+    toast("Reaction added.");
+  }
+  saveStore(); renderUpdates();
+}
+
+function toggleSave(id){
+  if(store.saved.includes(id)){
+    store.saved = store.saved.filter(x=>x!==id);
+    toast("Removed from saved posts.");
+  }else{
+    store.saved.push(id);
+    toast("Saved to this browser.");
+  }
+  saveStore(); renderUpdates();
+}
+
+function renderMatches(){
+  const featured = state.matches[0];
+  const featuredEl = $("#featuredMatch");
+  const list = $("#matchList");
+  if(!featuredEl || !list) return;
+
+  featuredEl.innerHTML = `
+    <span class="match-label">${featured.status}</span>
+    <span class="match-date"> • ${featured.date}</span>
+    <div class="scoreboard">
+      <div class="team"><b>${escapeHTML(featured.home)}</b><small>HOME</small></div>
+      <div class="score">${featured.score}</div>
+      <div class="team"><b>${escapeHTML(featured.away)}</b><small>AWAY</small></div>
+    </div>
+    <div class="match-actions">
+      <button class="btn dark" id="notifyMatch">🔔 Remind me</button>
+      <button class="btn primary" id="matchInfo">Match details</button>
+    </div>`;
+
+  list.innerHTML = state.matches.slice(1).map(m=>`
+    <div class="match-item">
+      <div><b>${escapeHTML(m.home)}</b> <span class="muted">vs</span> <b>${escapeHTML(m.away)}</b><small>${escapeHTML(m.date)}</small></div>
+      <div><span class="match-status">${escapeHTML(m.status)}</span><div class="match-score">${escapeHTML(m.score)}</div></div>
+    </div>`).join("");
+
+  $("#notifyMatch")?.addEventListener("click",()=>{
+    if("Notification" in window){
+      if(Notification.permission==="granted"){
+        new Notification("BIGGEST EMPIRE", {body:`Reminder: ${featured.home} vs ${featured.away}`});
+        toast("Match reminder sent.");
+      }else if(Notification.permission!=="denied"){
+        Notification.requestPermission().then(p=>{
+          if(p==="granted") new Notification("BIGGEST EMPIRE",{body:`Reminder: ${featured.home} vs ${featured.away}`});
+          else toast("Browser notifications are blocked.");
+        });
+      }else toast("Browser notifications are blocked.");
+    }else toast("Notifications are not supported here.");
+  });
+  $("#matchInfo")?.addEventListener("click",()=>toast("Edit the match data in app.js to publish your real fixture."));
+}
+
+function renderFormation(key){
+  const formation = formations[key] || formations["433"];
+  $("#formationName").textContent = formation.name;
+  const layer = $("#playersLayer");
+  if(!layer) return;
+  layer.innerHTML = formation.players.map((p,i)=>`
+    <button class="player-dot ${p[1]}" style="top:${p[2]}%;left:${p[3]}%" title="${p[0]}">
+      ${escapeHTML(p[0])}
+    </button>`).join("");
+  $$(".player-dot",layer).forEach(btn=>{
+    btn.addEventListener("click",()=>toast(`${btn.title}: tactical position selected.`));
+  });
+}
+
+function renderGallery(){
+  const grid = $("#galleryGrid");
+  if(!grid) return;
+  grid.innerHTML = state.gallery.map((item,i)=>`
+    <article class="gallery-card" data-gallery="${i}" style="--g1:${item.g1};--g2:${item.g2}">
+      <div class="gallery-content"><b>${escapeHTML(item.title)}</b><small>${escapeHTML(item.subtitle)}</small></div>
+    </article>`).join("");
+  $$(".gallery-card",grid).forEach(card=>{
+    card.addEventListener("click",()=>openGallery(Number(card.dataset.gallery)));
+  });
+}
+
+function openGallery(index){
+  const item = state.gallery[index];
+  if(!item) return;
+  const modal = $("#imageModal");
+  $("#imagePreview").innerHTML = `
+    <div class="image-preview" style="--g1:${item.g1};--g2:${item.g2}">
+      <div class="big-symbol">${item.symbol}</div>
+      <div class="caption">${escapeHTML(item.title)} — ${escapeHTML(item.subtitle)}</div>
+    </div>`;
+  modal.classList.remove("hidden");
+  document.body.style.overflow="hidden";
+}
+
+function updateCommunityStats(){
+  $("#savedCount").textContent = store.saved.length;
+  $("#reactionCount").textContent = Object.values(store.reactions).reduce((a,b)=>a+Number(b||0),0);
+  $("#visitCount").textContent = Math.max(1,store.visits||1);
+}
+
+function applyTheme(){
+  document.body.classList.toggle("light",store.theme==="light");
+  $("#themeBtn").textContent = store.theme==="light" ? "☀" : "◐";
+}
+function toggleTheme(){
+  store.theme = store.theme==="light" ? "dark" : "light";
+  saveStore(); applyTheme();
+  toast(store.theme==="light" ? "Light mode enabled." : "Dark mode enabled.");
+}
+
+function sharePage(){
+  const data = {title:CONFIG.siteName,text:"Enter the BIGGEST EMPIRE — eFootball community.",url:location.href};
+  if(navigator.share){
+    navigator.share(data).catch(()=>{});
+  }else{
+    navigator.clipboard?.writeText(location.href).then(()=>toast("Page link copied."));
+  }
+}
+
+function copyNumber(){
+  navigator.clipboard?.writeText(CONFIG.whatsappDisplay)
+    .then(()=>toast("WhatsApp number copied."))
+    .catch(()=>toast(CONFIG.whatsappDisplay));
+}
+
+function handleContactForm(event){
+  event.preventDefault();
+  const name = $("#contactName").value.trim();
+  const message = $("#contactMessage").value.trim();
+  if(!name || !message) return;
+  const text = `Hello BIGGEST EMPIRE,%0A%0AName: ${encodeURIComponent(name)}%0AMessage: ${encodeURIComponent(message)}`;
+  window.open(`https://wa.me/${CONFIG.whatsapp}?text=${text}`,"_blank","noopener");
+}
+
+function setFilter(filter){
+  state.filter=filter;
+  $$(".small-btn[data-filter]").forEach(b=>b.classList.toggle("selected",b.dataset.filter===filter));
+  renderUpdates();
+}
+
+function shuffleGallery(){
+  state.gallery.sort(()=>Math.random()-.5);
+  renderGallery();
+  toast("Gallery shuffled.");
+}
+
+function setupNavigation(){
+  const menu = $("#mainMenu");
+  $("#menuBtn")?.addEventListener("click",()=>{
+    const open = menu.classList.toggle("open");
+    $("#menuBtn").setAttribute("aria-expanded",String(open));
+  });
+  $$(".nav-link").forEach(link=>{
+    link.addEventListener("click",()=>menu.classList.remove("open"));
+  });
+
+  const sections = $$("main section[id]");
+  const observer = new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        $$(".nav-link").forEach(a=>a.classList.toggle("active",a.getAttribute("href")===`#${entry.target.id}`));
+      }
+    });
+  },{rootMargin:"-35% 0px -55% 0px"});
+  sections.forEach(s=>observer.observe(s));
+}
+
+function setupEvents(){
+  $("#updateSearch")?.addEventListener("input",e=>{state.search=e.target.value;renderUpdates();});
+  $("#clearSearch")?.addEventListener("click",()=>{$("#updateSearch").value="";state.search="";renderUpdates();});
+  $$("[data-filter]").forEach(btn=>btn.addEventListener("click",()=>setFilter(btn.dataset.filter)));
+
+  $("#updateGrid")?.addEventListener("click",e=>{
+    const btn=e.target.closest("[data-action]");
+    if(!btn)return;
+    const id=btn.dataset.id;
+    if(btn.dataset.action==="like")toggleLike(id);
+    if(btn.dataset.action==="save")toggleSave(id);
+    if(btn.dataset.action==="open")openPost(id);
+  });
+
+  $("#formationSelect")?.addEventListener("change",e=>renderFormation(e.target.value));
+  $("#themeBtn")?.addEventListener("click",toggleTheme);
+  $("#shareBtn")?.addEventListener("click",sharePage);
+  $("#copyNumber")?.addEventListener("click",copyNumber);
+  $("#randomGallery")?.addEventListener("click",shuffleGallery);
+  $("#contactForm")?.addEventListener("submit",handleContactForm);
+
+  $("#emailFallback")?.addEventListener("click",()=>{
+    if(CONFIG.contactEmail){
+      location.href=`mailto:${CONFIG.contactEmail}`;
+    }else{
+      toast("Add your email address in CONFIG.contactEmail in app.js.");
+    }
+  });
+
+  $("#resetPrefs")?.addEventListener("click",()=>{
+    if(confirm("Reset saved posts, reactions, theme and local visit count?")){
+      localStorage.removeItem(CONFIG.storageKey);
+      store=loadStore();
+      store.visits=1;
+      saveStore(); applyTheme(); renderUpdates();
+      toast("Local preferences reset.");
+    }
+  });
+
+  $$("[data-close-modal]").forEach(el=>el.addEventListener("click",()=>closeModal("#postModal")));
+  $$("[data-close-image]").forEach(el=>el.addEventListener("click",()=>closeModal("#imageModal")));
+
+  document.addEventListener("keydown",e=>{
+    if(e.key==="Escape"){closeModal("#postModal");closeModal("#imageModal");}
+  });
+
+  $("#modalContent")?.addEventListener("click",e=>{
+    const like=e.target.closest("[data-modal-like]");
+    const save=e.target.closest("[data-modal-save]");
+    const share=e.target.closest("[data-modal-share]");
+    if(like){toggleLike(like.dataset.modalLike);}
+    if(save){toggleSave(save.dataset.modalSave);}
+    if(share){
+      const post=state.posts.find(x=>x.id===share.dataset.modalShare);
+      if(post){
+        navigator.clipboard?.writeText(`${post.title} — ${location.href}`)
+          .then(()=>toast("Post link copied."));
+      }
+    }
+  });
+}
+
+function startVisitorCounter(){
+  const el=$("#visitorCount");
+  if(!el)return;
+  let base=128+Math.floor(Math.random()*27);
+  el.textContent=base;
+  setInterval(()=>{
+    base += Math.random()>.55 ? 1 : -1;
+    base=Math.max(101,Math.min(199,base));
+    el.textContent=base;
+  },8000);
+}
+
+function boot(){
+  store.visits=Number(store.visits||0)+1;
+  saveStore();
+  applyTheme();
+  renderUpdates();
+  renderMatches();
+  renderFormation("433");
+  renderGallery();
+  setupNavigation();
+  setupEvents();
+  startVisitorCounter();
+  $("#year").textContent=new Date().getFullYear();
+
+  // Add a tiny entrance effect without external libraries.
+  requestAnimationFrame(()=>document.body.classList.add("ready"));
+}
+
+boot();
+
+
+/* --------------------------------------------------------------------------
+   ADVANCED STATIC-SITE FEATURES
+   Everything below is browser-side and safe for a GitHub Pages/Render
+   static deployment. No secret keys or server credentials are stored here.
+   -------------------------------------------------------------------------- */
+
+function setupAdvancedFeatures(){
+  setupReadingProgress();
+  setupBackToTop();
+  setupKeyboardShortcuts();
+  setupOfflineIndicator();
+  setupClock();
+  setupSavedPostsPanel();
+  setupDataTools();
+  setupInstallPrompt();
+  setupLazyEnhancement();
+  setupQuickCommand();
+  setupScrollReveal();
+}
+
+/* Reading progress: a subtle indicator that follows the page scroll. */
+function setupReadingProgress(){
+  if($("#readingProgress")) return;
+  const bar=document.createElement("div");
+  bar.id="readingProgress";
+  Object.assign(bar.style,{
+    position:"fixed",left:"0",top:"0",height:"2px",width:"0%",
+    background:"linear-gradient(90deg,#79e8ff,#ffffff)",
+    zIndex:"2000",pointerEvents:"none",transition:"width .08s linear"
+  });
+  document.body.appendChild(bar);
+  const update=()=>{
+    const max=document.documentElement.scrollHeight-window.innerHeight;
+    bar.style.width=(max>0 ? Math.min(100,window.scrollY/max*100) : 0)+"%";
+  };
+  window.addEventListener("scroll",update,{passive:true});
+  update();
+}
+
+/* Back-to-top button is injected so the HTML stays clean. */
+function setupBackToTop(){
+  if($("#backTop")) return;
+  const button=document.createElement("button");
+  button.id="backTop";
+  button.type="button";
+  button.textContent="↑";
+  button.title="Back to top";
+  Object.assign(button.style,{
+    position:"fixed",right:"20px",bottom:"88px",width:"44px",height:"44px",
+    borderRadius:"12px",border:"1px solid var(--line)",
+    background:"var(--card)",color:"var(--text)",zIndex:"700",
+    opacity:"0",pointerEvents:"none",transition:"opacity .2s,transform .2s",
+    transform:"translateY(8px)",fontWeight:"900"
+  });
+  document.body.appendChild(button);
+  button.addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));
+  window.addEventListener("scroll",()=>{
+    const show=window.scrollY>700;
+    button.style.opacity=show?"1":"0";
+    button.style.pointerEvents=show?"auto":"none";
+    button.style.transform=show?"translateY(0)":"translateY(8px)";
+  },{passive:true});
+}
+
+/* Useful keyboard shortcuts for desktop visitors. */
+function setupKeyboardShortcuts(){
+  document.addEventListener("keydown",event=>{
+    const tag=(document.activeElement?.tagName||"").toLowerCase();
+    const typing=tag==="input"||tag==="textarea"||tag==="select";
+    if(event.key==="/"&&!typing){
+      event.preventDefault();
+      $("#updateSearch")?.focus();
+      toast("Search focused. Type to filter Empire updates.");
+    }
+    if(event.key.toLowerCase()==="g"&&!typing){
+      const sections=["home","updates","matches","tactics","gallery","community","contact"];
+      const index=Number(prompt("Go to section: 1 Home, 2 Updates, 3 Matches, 4 Tactics, 5 Gallery, 6 Community, 7 Contact"));
+      if(index>=1&&index<=sections.length){
+        document.getElementById(sections[index-1])?.scrollIntoView({behavior:"smooth"});
+      }
+    }
+  });
+}
+
+/* Online/offline state is real browser network status, not a server claim. */
+function setupOfflineIndicator(){
+  const update=()=>{
+    let el=$("#networkState");
+    if(!el){
+      el=document.createElement("div");
+      el.id="networkState";
+      Object.assign(el.style,{
+        position:"fixed",left:"18px",bottom:"18px",zIndex:"1000",
+        padding:"8px 11px",borderRadius:"10px",fontSize:"11px",
+        fontWeight:"900",border:"1px solid var(--line)",
+        background:"var(--card)",color:"var(--muted)",
+        opacity:"0",transition:"opacity .2s"
+      });
+      document.body.appendChild(el);
+    }
+    if(navigator.onLine){
+      el.textContent="● ONLINE";
+      el.style.color="#72e9a0";
+      if(el.dataset.manual==="1"){el.style.opacity="1";setTimeout(()=>el.style.opacity="0",2200);el.dataset.manual="0";}
+    }else{
+      el.textContent="● OFFLINE — local features still work";
+      el.style.color="#ffcc62";
+      el.style.opacity="1";
+      el.dataset.manual="1";
+    }
+  };
+  window.addEventListener("online",update);
+  window.addEventListener("offline",update);
+  update();
+}
+
+/* Local time badge, injected into the footer area. */
+function setupClock(){
+  const target=document.createElement("span");
+  target.id="localClock";
+  target.style.cssText="display:block;margin-top:6px;font-size:10px;color:#68727f";
+  $(".footer-right")?.appendChild(target);
+  const tick=()=>{
+    target.textContent="Your local time: "+new Intl.DateTimeFormat(undefined,{
+      hour:"2-digit",minute:"2-digit",second:"2-digit"
+    }).format(new Date());
+  };
+  tick();
+  setInterval(tick,1000);
+}
+
+/* Saved-post browser view. This is entirely local and never uploads content. */
+function setupSavedPostsPanel(){
+  const button=document.createElement("button");
+  button.id="savedPanelBtn";
+  button.className="small-btn";
+  button.textContent="★ Saved";
+  button.title="View posts saved in this browser";
+  $(".head-tools")?.appendChild(button);
+  button.addEventListener("click",()=>{
+    if(!store.saved.length){
+      toast("You have no saved posts yet.");
+      return;
+    }
+    const savedPosts=state.posts.filter(p=>store.saved.includes(p.id));
+    $("#modalContent").innerHTML=`
+      <p class="eyebrow">YOUR LIBRARY</p>
+      <h2 id="modalTitle">Saved Posts</h2>
+      <p>These bookmarks are stored only in this browser.</p>
+      <div style="display:grid;gap:9px;margin-top:18px">
+        ${savedPosts.map(p=>`
+          <button class="btn dark" style="justify-content:flex-start;text-align:left" data-open-saved="${p.id}">
+            ${p.symbol} &nbsp; <b>${escapeHTML(p.title)}</b>
+          </button>`).join("")}
+      </div>`;
+    $("#postModal").classList.remove("hidden");
+    document.body.style.overflow="hidden";
+  });
+
+  $("#modalContent")?.addEventListener("click",event=>{
+    const btn=event.target.closest("[data-open-saved]");
+    if(btn) openPost(btn.dataset.openSaved);
+  });
+}
+
+/* Export/import makes local content preferences portable between devices. */
+function setupDataTools(){
+  const community=$("#resetPrefs");
+  if(!community) return;
+  const wrap=document.createElement("div");
+  wrap.style.cssText="display:flex;gap:7px;flex-wrap:wrap;grid-column:1/-1";
+  wrap.innerHTML=`
+    <button type="button" class="small-btn" id="exportPrefs">Export preferences</button>
+    <button type="button" class="small-btn" id="importPrefs">Import preferences</button>
+    <input id="importPrefsFile" type="file" accept="application/json" hidden>`;
+  community.parentElement?.appendChild(wrap);
+
+  $("#exportPrefs")?.addEventListener("click",()=>{
+    const payload={
+      app:"BIGGEST EMPIRE",
+      version:2,
+      exportedAt:new Date().toISOString(),
+      preferences:store
+    };
+    const blob=new Blob([JSON.stringify(payload,null,2)],{type:"application/json"});
+    const url=URL.createObjectURL(blob);
+    const a=document.createElement("a");
+    a.href=url;a.download="biggest-empire-preferences.json";
+    document.body.appendChild(a);a.click();a.remove();
+    URL.revokeObjectURL(url);
+    toast("Preferences exported.");
+  });
+
+  $("#importPrefs")?.addEventListener("click",()=>$("#importPrefsFile")?.click());
+  $("#importPrefsFile")?.addEventListener("change",event=>{
+    const file=event.target.files?.[0];
+    if(!file)return;
+    const reader=new FileReader();
+    reader.onload=()=>{
+      try{
+        const data=JSON.parse(reader.result);
+        const incoming=data.preferences||data;
+        if(!incoming||typeof incoming!=="object") throw new Error("Invalid data");
+        store={
+          saved:Array.isArray(incoming.saved)?incoming.saved:[],
+          liked:Array.isArray(incoming.liked)?incoming.liked:[],
+          reactions:incoming.reactions&&typeof incoming.reactions==="object"?incoming.reactions:{},
+          theme:incoming.theme==="light"?"light":"dark",
+          visits:Number(incoming.visits)||1
+        };
+        saveStore();applyTheme();renderUpdates();updateCommunityStats();
+        toast("Preferences imported.");
+      }catch{
+        toast("That file is not a valid Empire preference file.");
+      }
+      event.target.value="";
+    };
+    reader.readAsText(file);
+  });
+}
+
+/* Optional PWA install prompt: works only when the browser provides it. */
+let deferredInstallPrompt=null;
+function setupInstallPrompt(){
+  window.addEventListener("beforeinstallprompt",event=>{
+    event.preventDefault();
+    deferredInstallPrompt=event;
+    let btn=$("#installSite");
+    if(!btn){
+      btn=document.createElement("button");
+      btn.id="installSite";
+      btn.className="small-btn";
+      btn.textContent="Install site";
+      $(".head-tools")?.appendChild(btn);
+    }
+    btn.onclick=async()=>{
+      if(!deferredInstallPrompt)return;
+      deferredInstallPrompt.prompt();
+      await deferredInstallPrompt.userChoice;
+      deferredInstallPrompt=null;
+      btn.remove();
+    };
+  });
+}
+
+/* Add a subtle hover tilt to cards on pointer devices. */
+function setupLazyEnhancement(){
+  if(!window.matchMedia("(pointer:fine)").matches)return;
+  document.addEventListener("pointermove",event=>{
+    const card=event.target.closest(".card,.community-card,.feature-card");
+    if(!card)return;
+    const rect=card.getBoundingClientRect();
+    const x=(event.clientX-rect.left)/rect.width-.5;
+    const y=(event.clientY-rect.top)/rect.height-.5;
+    card.style.transform=`translateY(-3px) perspective(800px) rotateX(${(-y*2).toFixed(2)}deg) rotateY(${(x*2).toFixed(2)}deg)`;
+  });
+  document.addEventListener("pointerout",event=>{
+    const card=event.target.closest(".card,.community-card,.feature-card");
+    if(card && !card.contains(event.relatedTarget))card.style.transform="";
+  });
+}
+
+/* A lightweight command palette built without a framework. */
+function setupQuickCommand(){
+  const palette=document.createElement("div");
+  palette.id="commandPalette";
+  palette.className="modal hidden";
+  palette.innerHTML=`
+    <div class="modal-backdrop" data-command-close></div>
+    <div class="modal-box" style="max-width:560px">
+      <button class="modal-close" data-command-close aria-label="Close">×</button>
+      <p class="eyebrow">QUICK COMMAND</p>
+      <h2 id="modalTitle">Empire Search</h2>
+      <div class="search-bar" style="margin-top:15px">
+        <span>⌕</span><input id="commandInput" placeholder="Try: updates, matches, tactics..." autocomplete="off">
+      </div>
+      <div id="commandResults" style="display:grid;gap:7px;margin-top:10px"></div>
+    </div>`;
+  document.body.appendChild(palette);
+
+  const commands=[
+    ["Home","home"],["Updates","updates"],["Matches","matches"],
+    ["Tactics","tactics"],["Gallery","gallery"],["Community","community"],["Contact","contact"]
+  ];
+  const results=$("#commandResults");
+  const renderCommands=q=>{
+    const query=q.toLowerCase().trim();
+    const list=commands.filter(c=>!query||c[0].toLowerCase().includes(query));
+    results.innerHTML=list.map(c=>`
+      <button class="btn dark" style="justify-content:flex-start" data-command-section="${c[1]}">→ ${c[0]}</button>`).join("");
+  };
+  renderCommands("");
+  $("#commandInput").addEventListener("input",e=>renderCommands(e.target.value));
+  results.addEventListener("click",e=>{
+    const btn=e.target.closest("[data-command-section]");
+    if(!btn)return;
+    palette.classList.add("hidden");
+    document.body.style.overflow="";
+    document.getElementById(btn.dataset.commandSection)?.scrollIntoView({behavior:"smooth"});
+  });
+  palette.addEventListener("click",e=>{
+    if(e.target.matches("[data-command-close]")){
+      palette.classList.add("hidden");document.body.style.overflow="";
+    }
+  });
+  document.addEventListener("keydown",e=>{
+    if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==="k"){
+      e.preventDefault();
+      palette.classList.remove("hidden");
+      document.body.style.overflow="hidden";
+      $("#commandInput").focus();
+    }
+  });
+}
+
+/* Reveal sections as the visitor scrolls down. */
+function setupScrollReveal(){
+  if(!("IntersectionObserver" in window))return;
+  const targets=$$(".card,.match-feature,.match-item,.feature-card,.community-card,.contact-form,.final-banner,.gallery-card");
+  targets.forEach(el=>{
+    el.style.opacity="0";
+    el.style.transform="translateY(14px)";
+    el.style.transition="opacity .45s ease,transform .45s ease";
+  });
+  const observer=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.style.opacity="1";
+        entry.target.style.transform="";
+        observer.unobserve(entry.target);
+      }
+    });
+  },{threshold:.08});
+  targets.forEach(el=>observer.observe(el));
+}
+
+/* A safe public-share helper for individual update cards. */
+function sharePost(post){
+  const title=post?.title||CONFIG.siteName;
+  const text=`${title} — ${CONFIG.siteName}`;
+  if(navigator.share){
+    navigator.share({title,text,url:location.href}).catch(()=>{});
+  }else{
+    navigator.clipboard?.writeText(`${text} ${location.href}`).then(()=>toast("Post link copied."));
+  }
+}
+
+/* Optional dynamic post API hook.
+   Developers can call window.BiggestEmpire.addPost({...}) in the console
+   or from another local script. Nothing is sent to a remote server. */
+window.BiggestEmpire={
+  version:"2.0-static",
+  getState:()=>JSON.parse(JSON.stringify(state)),
+  getPreferences:()=>JSON.parse(JSON.stringify(store)),
+  addPost(post){
+    if(!post||!post.title)return false;
+    const item={
+      id:post.id||`local-${Date.now()}`,
+      category:post.category||"news",
+      tag:post.tag||"NEWS",
+      title:post.title,
+      text:post.text||"",
+      date:post.date||"Just added",
+      symbol:post.symbol||"⚡",
+      accent:post.accent||["#79e8ff","#4169ff"],
+      reactions:Number(post.reactions)||0
+    };
+    state.posts.unshift(item);
+    renderUpdates();
+    toast("New local post added.");
+    return item.id;
+  },
+  removePost(id){
+    const before=state.posts.length;
+    state.posts=state.posts.filter(p=>p.id!==id);
+    renderUpdates();
+    return state.posts.length<before;
+  },
+  clearLocalData(){
+    localStorage.removeItem(CONFIG.storageKey);
+    store=loadStore();
+    renderUpdates();updateCommunityStats();applyTheme();
+    return true;
+  }
+};
+
+/* Initialize the advanced layer after the core UI has painted. */
+setTimeout(setupAdvancedFeatures,0);
+
+  </script>
+</body>
+</html>
